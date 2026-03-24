@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Вам надійшло повідомлення</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1A56DB">
+
+  <meta property="og:title" content="Вам надійшло повідомлення від Дмитра">
+  <meta property="og:description" content="Натисніть, щоб написати менеджеру у Telegram">
+  <meta property="og:image" content="Diabloo.jpg">
+
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap)" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F0F4FA;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 480px;
+      background: #fff;
+      border: 1px solid #dde3ee;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(26,86,219,0.15);
+      overflow: hidden;
+    }
+
+    .flag-stripe {
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #F5C518 50%, #1A56DB 50%);
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #F4F7FB;
+      padding: 18px 20px;
+      border-bottom: 1px solid #dde3ee;
+    }
+
+    .profile-avatar {
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #1A56DB;
+    }
+
+    .online-dot {
+      width: 13px;
+      height: 13px;
+      background: #16A34A;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      position: relative;
+      top: 40px;
+      left: -20px;
+    }
+
+    .profile-name {
+      font-weight: 700;
+      font-size: 16px;
+      color: #0D1B2A;
+    }
+
+    .profile-status {
+      font-size: 13px;
+      color: #4A5568;
+      margin-top: 4px;
+    }
+
+    .content-body {
+      padding: 20px;
+    }
+
+    .offer-eyebrow {
+      text-align: center;
+      font-weight: 700;
+      color: #1A56DB;
+      margin-bottom: 14px;
+    }
+
+    .offer-title {
+      font-size: 30px;
+      font-weight: 800;
+      color: #0D1B2A;
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .offer-title .amount {
+      color: #1A56DB;
+      font-size: 38px;
+    }
+
+    .offer-sub {
+      text-align: center;
+      color: #4A5568;
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
+
+    .conditions-block {
+      background: #F4F7FB;
+      border-radius: 12px;
+      border: 1px solid #dde3ee;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+
+    .conditions-label {
+      color: #1A56DB;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .conditions-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14.5px;
+      color: #0D1B2A;
+    }
+
+    .conditions-list li {
+      padding: 8px 0;
+      border-top: 1px solid #dde3ee;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .conditions-list li:first-child {
+      border-top: none;
+    }
+
+    .cond-icon {
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+
+    .cond-text b {
+      font-weight: 700;
+    }
+
+    .action-section {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .action-hint {
+      color: #8899AA;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #1A56DB;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 17px 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(26,86,219,0.3);
+      transition: all 0.2s ease;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .btn-cta:hover {
+      background: #1044B8;
+      transform: scale(1.02);
+    }
+
+    .btn-arrow {
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="flag-stripe"></div>
+
+    <div class="profile-header">
+      <img src="Diabloo.jpg" alt="Фото Дмитро" class="profile-avatar">
+      <span class="online-dot"></span>
+
+      <div>
+        <div class="profile-name">Дмитро</div>
+        <div class="profile-status">Менеджер · Онлайн</div>
+      </div>
+    </div>
+
+    <div class="content-body">
+      <p class="offer-eyebrow">🇺🇦 ГАРАНТОВАНА ВИПЛАТА 🇺🇦</p>
+
+      <h1 class="offer-title">
+        Отримайте винагороду<br>
+        <span class="amount">1500 грн</span>
+      </h1>
+
+      <p class="offer-sub">
+        за оренду ваших онлайн‑банків.<br>
+        Швидко та безпечно!
+      </p>
+
+      <div class="conditions-block">
+        <div class="conditions-label">УМОВИ ОТРИМАННЯ:</div>
+
+        <ul class="conditions-list">
+          <li>
+            <span class="cond-icon">⚠️</span>
+            <div class="cond-text"><b>ВІДСУТНІСТЬ ВИКОНАВЧИХ ПРОВАДЖЕНЬ</b></div>
+          </li>
+          <li>
+            <span class="cond-icon">🆔</span>
+            <div class="cond-text">ID‑картка (<b>паспорт нового зразка</b>) або закордонний паспорт</div>
+          </li>
+          <li>
+            <span class="cond-icon">✅</span>
+            <div class="cond-text"><b>ВСТАНОВЛЕНА ДІЯ</b> та активований <b>Дія·Підпис</b></div>
+          </li>
+          <li>
+            <span class="cond-icon">🔰</span>
+            <div class="cond-text">Безпечна процедура за підтримки менеджера</div>
+          </li>
+          <li>
+            <span class="cond-icon">🔰</span>
+            <div class="cond-text">5000+ позитивних відгуків</div>
+          </li>
+          <li>
+            <span class="cond-icon">🤝</span>
+            <div class="cond-text">Приведи друга — отримай <b>500 грн</b></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="action-section">
+      <p class="action-hint">Натисніть, щоб отримати інструкції від Дмитра</p>
+      <a href="tg://resolve?domain=verif_diablo" class="btn-cta">
+        НАПИСАТИ ДМИТРУ
+        <span class="btn-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.5"
+               stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
